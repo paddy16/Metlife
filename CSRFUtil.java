@@ -125,14 +125,5 @@ public class CSRFUtil {
     }
     
     
-    /**
-     * Generates and returns a new CSRF token, which is created a hexadecimal string representation of 128-bits of random data.
-     * @return A newly generated CSRF token. 
-     */
-    public static final String generateCSRFToken() {
-        SecureRandom randomNumberGenerator = new SecureRandom();
-        byte bytes[] = new byte[16];
-        randomNumberGenerator.nextBytes(bytes);        
-        return DatatypeConverter.printHexBinary(bytes);
-    }
+   
 }
